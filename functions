@@ -9,3 +9,16 @@ if((Object.values(source).every(element => Object.values(collection[i]).includes
 }
   return arr;
 }
+
+//Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
+
+function translatePigLatin(str) {
+  let reg =/^[aioueAIOUE]/
+  if(reg.test(str)){return str.concat("way")}{let a= str.split(/(?=[aeuio])/);
+  a.push(a[0]);
+  a.shift();
+ let b=a.join('').concat("ay");
+  return b
+  }
+  ;
+}
