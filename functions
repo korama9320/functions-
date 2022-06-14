@@ -10,6 +10,12 @@ if((Object.values(source).every(element => Object.values(collection[i]).includes
   return arr;
 }
 
+
+
+
+
+
+
 //Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
 
 function translatePigLatin(str) {
@@ -28,4 +34,21 @@ function myReplace(str, before, after) {
     
   return str.replace(before,after);
 
+}
+
+
+
+
+
+
+//Pairs of DNA strands consist of protein base pairs. Base pairs are represented by the characters AT and CG, which form building blocks of the DNA double helix.
+function pairElement(str) {
+  let a =str.split("")
+  let arr=[];
+  for(let i=0;i<a.length;i++){
+    if(a[i]==="C"){arr.push(["C","G"])}else if(a[i]==="G"){arr.push(["G","C"])}else if(a[i]==="A"){arr.push(["A","T"])}else if(a[i]==="T"){arr.push(["T","A"])}
+
+  }
+  console.log(arr)
+  return arr;
 }
