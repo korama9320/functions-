@@ -1,5 +1,7 @@
 
 // a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument).
+
+
 function whatIsInAName(collection, source) {
   const arr = [];
   
@@ -41,7 +43,8 @@ function myReplace(str, before, after) {
 
 
 
-//Pairs of DNA strands consist of protein base pairs. Base pairs are represented by the characters AT and CG, which form building blocks of the DNA double helix.
+//Pairs of DNA strands consist of protein base pairs. 
+//Base pairs are represented by the characters AT and CG, which form building blocks of the DNA double helix.
 function pairElement(str) {
   let a =str.split("")
   let arr=[];
@@ -52,3 +55,23 @@ function pairElement(str) {
   console.log(arr)
   return arr;
 }
+
+
+
+
+
+//Find the missing letter in the passed letter range and return it.
+//If all letters are present in the range, return undefined.
+
+
+function fearNotLetter(str) {
+  for(let i=0;i<str.length;i++){
+    //console.log(String.fromCharCode(97))
+
+    if(str.charCodeAt(i)!==str.charCodeAt(0)+i){return String.fromCharCode(str.charCodeAt(0)+i)}
+  }
+  return undefined;
+};
+;
+
+
