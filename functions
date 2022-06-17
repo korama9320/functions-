@@ -111,3 +111,22 @@ let arr=[1,1];
   return a;
 }
 
+
+//sum all prime
+
+
+function sumPrimes(num) {
+  let a=0;
+for(let i=2;i<=num;i++){
+  
+const isPrime = num => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++)
+        if(num % i === 0) return false; 
+    return num > 1;
+}
+
+if(isPrime(i)){a+=i}
+
+  } return a;}
+
+
