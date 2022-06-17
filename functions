@@ -72,6 +72,23 @@ function fearNotLetter(str) {
   }
   return undefined;
 };
-;
+  
+  
+  
+  
+//  Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
 
+function uniteUnique(...arr) {
+  let todim =[...arr];
+  let conc=[];
+ let arrr=[];
+ for(let i=0;i<todim.length;i++){
+   conc=conc.concat(todim[i]);
+ }
+ for(let i=0;i<conc.length;i++){
+   if(arrr.indexOf(conc[i])==-1){arrr.push(conc[i])}
+ }
+
+  return arrr;
+};
 
