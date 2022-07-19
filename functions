@@ -130,3 +130,27 @@ if(isPrime(i)){a+=i}
   } return a;}
 
 
+
+
+//Smallest Common Multiple
+
+function smallestCommons(arr) {
+  arr=arr.sort(function(a,b){return a-b});
+let arrr=[];
+for(let i=arr[0];i<=arr[1];i++){
+    arrr.push(i)
+  }
+  let max =1
+  for(let item of arrr){
+    max*=item
+  };
+let b =arrr.length-1;
+  
+  for(let i=arrr[b];i<max;i+=arrr[b]){
+  let d=0;
+  for(let j=0;j<=b;j++){
+    if(i%arrr[j]===0){d++}
+  }
+  if(d===b+1){return i}
+}}
+
