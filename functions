@@ -154,3 +154,25 @@ let b =arrr.length-1;
   if(d===b+1){return i}
 }}
 
+//Return an English translated sentence of the passed binary string.
+
+function binaryAgent(str) {
+  let letter =str.split(" ")
+  let sent=""
+for(let index of letter){sent+=String.fromCharCode(parseInt(index,"2"))
+  
+}
+  return sent;
+}
+
+//Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+function truthCheck(collection, pre) {
+    let d =0;
+
+for(let i of collection){
+  if(i.hasOwnProperty(pre)&&Boolean(i[pre])){d++}
+  console.log(d)
+}
+if(d===collection.length){return true}else{return false}
+}
