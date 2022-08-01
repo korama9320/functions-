@@ -176,3 +176,42 @@ for(let i of collection){
 }
 if(d===collection.length){return true}else{return false}
 }
+
+
+//make aperson
+
+const Person = function(firstAndLast) {
+  
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  let fullname=firstAndLast;
+  this.getFullName = function() {
+    
+    return fullname ;
+  };
+  this.getFirstName = function() {
+    const name=fullname.split(" ")
+    return name[0] ;
+  };
+  this.getLastName = function() {
+    const name=fullname.split(" ")
+    return name[1] ;
+  };
+ this.setFirstName = function(newfirst) {
+    const name=fullname.split(" ");
+     name.shift() ;
+     name.unshift(newfirst);
+    fullname=name[0]+" "+name[1]
+  };
+  this.setLastName = function(newfirst) {
+    const name=fullname.split(" ");
+     name.pop() ;
+     name.push(newfirst);
+    fullname=name[0]+" "+name[1];
+  };
+  this.setFullName = function(newfull) {
+    fullname=newfull
+    return fullname ;
+  };
+  return fullname;
+};
