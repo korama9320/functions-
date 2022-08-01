@@ -215,3 +215,18 @@ const Person = function(firstAndLast) {
   };
   return fullname;
 };
+
+
+//Map the Debris
+function orbitalPeriod(arr) {
+  let t;
+  const newarr=[]
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+  for(let i=0;i<arr.length;i++){
+   t=Math.round(2*Math.PI*Math.sqrt(Math.pow(arr[i].avgAlt+earthRadius,3)/GM))
+ 
+newarr.push({name:arr[i].name ,orbitalPeriod:t})}
+  return newarr;
+}
+
