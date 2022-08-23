@@ -230,3 +230,15 @@ newarr.push({name:arr[i].name ,orbitalPeriod:t})}
   return newarr;
 }
 
+//Palindrome Checker
+
+function palindrome(str) {
+  let regex=/[_ , . -- ]/;
+let a=str.split(regex).filter( (item)=>item!="").join("").split("");
+let c=a.join("").toLowerCase();
+let b=a.reverse().join("").toLowerCase();
+
+  if(c===b){console.log(c,b);return true}else {  console.log(c,b);
+return false}
+}
+
