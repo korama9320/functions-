@@ -242,3 +242,37 @@ let b=a.reverse().join("").toLowerCase();
 return false}
 }
 
+//Roman Numeral Converter
+
+
+function convertToRoman(num) {
+  let st="";
+  let a=num/1000;
+  let b =(num%1000)/900;
+  let c =((num%1000)%900)/500;
+  let d=(((num%1000)%900)%500)/400;
+  let e=((((num%1000)%900)%500)%400)/100;
+  let f=(((((num%1000)%900)%500)%400)%100)/90;
+  let g=((((((num%1000)%900)%500)%400)%100)%90)/50;
+  let h=(((((((num%1000)%900)%500)%400)%100)%90)%50)/40;
+  let i=((((((((num%1000)%900)%500)%400)%100)%90)%50)%40)/10;
+  let j=(((((((((num%1000)%900)%500)%400)%100)%90)%50)%40)%10)/9;
+  let k=((((((((((num%1000)%900)%500)%400)%100)%90)%50)%40)%10)%9)/5;
+  let l=(((((((((((num%1000)%900)%500)%400)%100)%90)%50)%40)%10)%9)%5)/4;
+  let m=((((((((((((num%1000)%900)%500)%400)%100)%90)%50)%40)%10)%9)%5)%4)/1;
+  let arr=[a,b,c,d,e,f,g,h,i,j,k,l,m];
+  let arrr=[];
+  let rom=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+for(let i of arr){
+  arrr.push(Math.floor(i))
+};
+for(i in arrr){
+  for(let m=0;m<arrr[i];m++){
+    st+=rom[i];
+    console.log
+  }
+}
+  console.log(st);
+ return st;
+}
+
