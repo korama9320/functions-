@@ -275,4 +275,31 @@ for(i in arrr){
   console.log(st);
  return st;
 }
+  
+  
+  //phone number validator
+  
+  
+  function telephoneCheck(str) {
+  if(str.endsWith(")")){return false};
+if(str.startsWith("-")){return false};
+  let arc=0;
+  let s=0;
+  for(let i of str){
+if(i=="-"){s++}
+if(i=="("||i==")"){arc++}
+console.log(i)
+  };
+  if((arc==2||arc==0)&&s<3){
+  let st=str.split(/[- ( )]/).join("");
+  if(st.charAt(0)==1){st=st.split("");st.shift();st=st.join("")}
+  
+  console.log(st);
+  let regex=/^\d{10}$/;
+  return regex.test(st);
+  }
+  return false
+
+}
+
 
