@@ -244,6 +244,25 @@ return false}
 
 //Roman Numeral Converter
 
+function convertToRoman(num) {
+  let st="";
+  let nu=num;
+  let arr=[1000,900,500,400,100,90,50,40,10,9,5,4,1]
+  let rom=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+  let arrr=[];
+  for(let i=0;i<13;i++){
+      arrr.push(Math.floor(nu/arr[i]));
+      nu=nu%arr[i];
+  }
+for(let i in arrr){
+  for(let m=0;m<arrr[i];m++){
+    st+=rom[i];
+    console.log
+  }
+}
+ return st;
+}
+
 
 function convertToRoman(num) {
   let st="";
